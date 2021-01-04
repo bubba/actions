@@ -119,6 +119,10 @@ jobs:
 | `cabal-exe`   | The path of the cabal _executable_           | string |
 | `stack-exe`   | The path of the stack _executable_           | string |
 
+Additionally, on Windows, this action sets the `STACK_ROOT` environment variable to `C:\sr` if not already set.
+This is done to help prevent path-length errors on windows.
+For the same reason, cabal's store is also set to `C:\sr` on windows.
+
 ## Version Support
 
 **GHC:**
